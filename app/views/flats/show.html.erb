@@ -1,0 +1,44 @@
+<div class="banner">
+  <img src="https://m.psecn.photoshelter.com/img-get2/I0000YtYQBLfMbJI/sec=/fit=1200x1200/I0000YtYQBLfMbJI.jpg" alt="bannière">
+</div>
+<div class="container mt-5">
+  <div class="row">
+    <div id="details-section" class="col-md-9 mb-4">
+      <div class="card shadow-sm border-0">
+        <div class="card-body">
+          <div id="title-address" class="mb-4">
+            <h1 class="display-5"><%= @flat.name %></h1>
+            <h4 class="text-muted"><%= @flat.address %></h4>
+          </div>
+          <div id="description-section" class="mb-4">
+            <h3 class="h5 text-primary">A bit more about this location...</h3>
+            <p class="text-secondary"><%= @flat.description %></p>
+          </div>
+          <div id="additional-details">
+            <p><strong>Price:</strong> $<%= @flat.price_per_night %> per night</p>
+            <p><strong>Guests:</strong> <%= @flat.number_of_guests %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="book-section" class="col-md-3">
+      <div class="card shadow-sm border-0">
+        <div class="card-body">
+          <h4 class="card-title mb-3">Book this place!</h4>
+          <form>
+            <div class="mb-3">
+              <label for="dateFrom" class="form-label">Date From</label>
+              <input type="date" class="form-control" id="dateFrom" name="dateFrom" required>
+            </div>
+            <div class="mb-3">
+              <label for="dateTo" class="form-label">Date To</label>
+              <input type="date" class="form-control" id="dateTo" name="dateTo" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
